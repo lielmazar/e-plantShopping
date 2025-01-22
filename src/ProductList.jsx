@@ -329,19 +329,20 @@ const handlePlantsClick = (e) => {
             {
                 plantsArray.map((cat) => (
                     <>
-                    <h2>{cat.category}</h2>
+                    <h2 style={{padding: '20px'}}>{cat.category}</h2>
                     {
                     cat.plants.map(plant => (
-                        <div className='product-card'>
-                            <span>{plant.name}</span><br/>
-                            <img src={plant.image} alt="A plant" width="50px" height="50px" /><br/>
+                        <div className="product-card">
+                            <span style={{color: 'red', fontSize: '2rem', fontWeight:'bolder'}}>{plant.name}</span><br/>
+                            <img src={plant.image} alt="A plant" width="150px" height="150px" /><br/>
                             <span>{plant.description}</span><br/>
-                            <span>{plant.cost}</span><br/>
-                            <button onClick={(e) => handleAddToCart(plant)}>
+                            <span style={{fontSize: '1.5rem', fontWeight:'bold'}}>{plant.cost}</span><br/>
+                            <button  style={{padding: '10px'}} onClick={(e) => handleAddToCart(plant)}>
                                 Add to Cart
                             </button>
                         </div>
                         ))
+
                     }
                     </>
                 ))
